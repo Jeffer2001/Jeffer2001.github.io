@@ -1,0 +1,266 @@
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(210, 245, 245);
+    border-top: 3px solid white;
+    border-right: 3px solid white;
+    border-left: 3px solid white;
+    border-bottom: 3px solid white;
+}
+main{flex-grow: 1;}
+
+main{
+    border-top: 3px solid white;
+    border-right: 3px solid white;
+    border-left: 3px solid white;
+    border-bottom: 3px solid white;
+}
+header{
+    border-radius: 20px;
+    background-color: chartreuse;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100;
+    gap: 450px;
+}
+nav{
+    display: flex;
+    gap: 50px;
+}
+nav a{
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: 4s ease;
+}
+.nav a:hover{
+    border-bottom: 2px solid black;
+    transition: 4s ease;
+}
+.promo_logo_img{
+    padding: 20px;
+    display: flex; /* Utiliza Flexbox para un diseño más flexible */
+    justify-content: space-between; /* Alinea los elementos al inicio y al final del contenedor */
+    align-items: center; /* Centra los elementos verticalmente */
+    .Promo{
+        width: 150px; /* Ajusta el ancho según el tamaño de tu logo */          
+    }
+}
+.lista {
+    display: none; 
+  } 
+  #menu:checked ~ .lista {
+    display: block; 
+  }
+  label {
+    box-sizing: border-box;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 50px;
+    height: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    text-align: center;
+    user-select: none;
+  }
+   .lista li{
+    display: block;
+    background: lightgrey;
+    margin: 0;
+    padding: 10px;
+    list-style: none;
+    border-bottom: 1px solid grey;
+    border-radius: 10px;
+  }
+main{
+    background-color: rgb(193, 134, 248);
+    border-radius: 20px;
+    .video-youtube{
+        display: grid;
+        place-items: center;
+        padding: 20px;
+    }
+
+    .slider-frame{  
+        width: 500px;
+        height: 500px;
+        margin: auto;
+        padding: auto;
+        overflow: hidden;  
+      }
+    .slider-frame ul{
+        display: flex;
+        padding: 0;
+        width: 400%; 
+        
+        animation: slide 10s infinite alternate ease-in-out;
+    } 
+    .slider-frame li{
+        list-style: none;
+        width: 100%;       
+    }
+    .slider-frame img{
+        width: 100%;
+    }
+    .mision{  
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        width: 70%;
+      }
+    .mision-text{
+        margin-top: 15px;
+        text-align: center;
+    }
+    .vision{  
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        width: 70%;     
+    }
+    .vision-text{
+        margin-top: 15px;
+        text-align: center;
+    }
+}
+@keyframes slide{
+    0% {margin-left: 0%;}
+    20% {margin-left: 0%;}
+
+    25% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+
+    50% {margin-left: -200%;}
+    70% {margin-left: -200%;}
+
+    75% {margin-left: -300%;}
+    95% {margin-left: -300%;}
+}
+footer{
+    
+    .red-cont-geo{
+        background-color: rgb(216, 157, 114);
+        border-radius: 20px;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 3px solid white;
+        border-right: 3px solid white;
+        border-left: 3px solid white;
+        border-bottom: 3px solid white;
+        .red{
+            padding: 20px;      
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+            text-align: center;
+        }
+        .cont{
+            padding: 20px;       
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+            text-align: center;
+        }
+        .geo{
+            padding: 20px;       
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+            text-align: center;
+        }
+    }
+}
+div img{
+    margin-bottom: 20px;
+}
+
+@media (max-width:600px){
+
+    body{
+        border-radius: 20px;
+    }
+    header{
+        background-color: brown;     
+        margin: 50px;
+        gap: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+    }
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    main{
+        background-color: darkolivegreen;
+        .video-youtube{
+            iframe{
+                height: 250px;
+                width: 250px;
+            }
+        }
+        
+        .slider-frame{
+            width: 100%;
+            height: 100%;
+        }
+        .slider-frame img{
+            width: 100%;
+            height: 100%
+            
+        }  
+        .mision{
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            border-bottom: 3px solid white;
+        }
+        .mision-text{
+            margin-bottom: 10px;
+        }
+        .vision{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 3px solid white;
+        }
+    }
+
+    footer .red-cont-geo{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        .red{
+            justify-content: space-between;
+            align-items: center;
+        }
+        .cont{
+            justify-content: space-between;
+            align-items: center;
+        }
+        .geo{
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+}
